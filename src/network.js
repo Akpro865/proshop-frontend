@@ -1,8 +1,5 @@
 import axios from 'axios'
 
 export const url = axios.create({
-	baseURL: "http://localhost:3000"
+	baseURL: "https://proshop-server.onrender.com"
 })
-
-//https://ak-shop.herokuapp.com/
-// https://akproshop.netlify.app
