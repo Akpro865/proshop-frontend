@@ -1,0 +1,30 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/App.js",
+    "./src/index.js",
+    "./src/comps/Header.js",
+    "./src/comps/Footer.js",
+    "./src/comps/Category.js",
+    "./src/screens/Home.js",
+    "./src/comps/Rating.js",
+    "./src/comps/FeaturedSlider.js",
+    "./src/comps/FeaturedCard.js",
+    "./src/comps/ProductSlide.js",
+    "./src/screens/Product.js",
+    "./src/screens/Cart.js",
+    "./src/screens/Register.js",
+    "./src/screens/Login.js",
+    "./src/screens/Profile.js",
+    "./src/screens/Shipping.js",
+    "./src/screens/PlaceOrder.js",
+    "./src/screens/Orders.js",
+    "./src/screens/Payment/Gpay.js",
+    "./src/screens/Payment/Stripe.js",
+    "./src/screens/Payment/Success.js",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}

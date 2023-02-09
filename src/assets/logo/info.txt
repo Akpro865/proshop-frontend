@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: GoudyBookletter1911
+font link: https://fonts.google.com/specimen/Goudy+Bookletter+1911
+font author: Barry Schwartz
+font author site: http://crudfactory.com/
+
+
+icon designer: Ahmed Elzahra
+icon designer link: /ahmedelzahra
+        
+{"bg":"#EBFBFA","icon-gradient-0":"#41E296","icon-gradient-1":"#00C4EE","font":"#08403F","slogan":"#1c5453"}
+      

@@ -1,0 +1,21 @@
+.profile{
+	.options {
+		display	: none;
+		background-color: white;		
+		border-radius: 5px;
+		margin: 4px;
+		position: relative;
+		}
+
+	span {
+		padding: 8px;
+		cursor: pointer;
+	}
+	&:hover {
+		.options {
+			display: flex;
+			flex-direction: column;
+			position: absolute
+		}
+	}
+}

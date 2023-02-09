@@ -1,0 +1,8 @@
+.productImg {
+	height: calc(64vh - 26px);
+}
+
+.fullScreen {
+	height: calc(100vh - 100px);
+}
+
