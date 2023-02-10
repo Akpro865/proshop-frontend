@@ -48,7 +48,8 @@ export default function Register(){
 			const { data } = await url.post('/api/auth/register', JSON.stringify(details), {
 				headers: {
 				'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Headers": "*",
 			}
 			})
 			navigate('/login')
