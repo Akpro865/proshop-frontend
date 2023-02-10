@@ -6,8 +6,8 @@ import '../styles/product.css'
 
 export default function Login(){
 	const [details, setDetails] = useState({
-		email: "",
-		password: ""
+		"email": "",
+		"password": ""
 	})
 
 	const dispatch = useDispatch()
@@ -24,12 +24,13 @@ export default function Login(){
 			[e.target.name]: e.target.value
 		}))
 	}
-
+	
 	const handleLogin = async()=>{
 		if(!details.email || !details.password) alert('fill all fields')
-		await dispatch(loginUser(details))		
+		await dispatch(loginUser(JSON.stringify(details)))		
 	}
-	console.log(details)
+
+	console.log()
 	return(
 	 <div className='fullScreen flex items-center justify-center'>
 	  <div className='flex flex-col shadow px-8 py-5 rounded'>

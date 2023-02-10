@@ -10,7 +10,12 @@ const initialState = {
 
 export const loginUser = createAsyncThunk('auth/loginUser', async(userData)=>{
   try{
-		const { data } = await url.post('/api/auth/login', userData)
+		const { data } = await url.post('/api/auth/login', userData, {
+			headers: {
+				'Accept': 'application/json',
+        'Content-Type': 'application/json'
+			}
+		})
 		return data
 	} catch(err) {
 		console.log(err)
@@ -28,8 +33,10 @@ export const authSlice = createSlice({
 	extraReducers: (builder) => {
     builder
       .addCase(loginUser.fulfilled, (state, {payload}) => {
-        state.user = payload
-        localStorage.setItem('userInfo', JSON.stringify(payload))
+      	if(state.user !== undefined){
+        	state.user = payload
+        	localStorage.setItem('userInfo', JSON.stringify(payload))
+        }
       })
     }
 })

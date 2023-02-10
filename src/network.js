@@ -1,5 +1,7 @@
 import axios from 'axios'
 
 export const url = axios.create({
-	baseURL: "https://proshop-server-nbjq.onrender.com"
+	baseURL: "http://localhost:3000"
 })
+
+// https://proshop-server-nbjq.onrender.com

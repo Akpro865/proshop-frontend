@@ -11,9 +11,9 @@ import github from '../assets/github.png'
 
 export default function Register(){
 	const [details, setDetails] = useState({
-		name: "",
-		email: "",
-		password: ""
+		"name": "",
+		"email": "",
+		"password": ""
 	})
 	
 	const navigate = useNavigate()
@@ -45,13 +45,19 @@ export default function Register(){
 	
 	const handleRegister = async()=>{
 		try{
-			const { data } = await url.post('/api/auth/register', details)
+			const { data } = await url.post('/api/auth/register', JSON.stringify(details), {
+				headers: {
+				'Accept': 'application/json',
+        'Content-Type': 'application/json'
+			}
+			})
 			navigate('/login')
 		}catch(err){
 			console.log(err)
 		}
 	}
 
+	console.log(JSON.stringify(details))
 	const googleSignUp = ()=>{
 	    window.open('http://localhost:5000/auth/google', '_self')
 	}
