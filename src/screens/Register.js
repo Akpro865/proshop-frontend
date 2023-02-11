@@ -11,9 +11,9 @@ import github from '../assets/github.png'
 
 export default function Register(){
 	const [details, setDetails] = useState({
-		"name": "",
-		"email": "",
-		"password": ""
+		name: "",
+		email: "",
+		password: ""
 	})
 	
 	const navigate = useNavigate()
@@ -45,7 +45,7 @@ export default function Register(){
 	
 	const handleRegister = async()=>{
 		try{
-			const { data } = await url.post('/api/auth/register', JSON.stringify(details))
+			const { data } = await url.post('/api/auth/register', details)
 			navigate('/login')
 		}catch(err){
 			console.log(err)

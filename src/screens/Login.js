@@ -27,7 +27,7 @@ export default function Login(){
 	
 	const handleLogin = async()=>{
 		if(!details.email || !details.password) alert('fill all fields')
-		await dispatch(loginUser(JSON.stringify(details)))		
+		await dispatch(loginUser(details))		
 	}
 
 	console.log()
