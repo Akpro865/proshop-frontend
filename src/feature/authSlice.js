@@ -10,13 +10,7 @@ const initialState = {
 
 export const loginUser = createAsyncThunk('auth/loginUser', async(userData)=>{
   try{
-		const { data } = await url.post('/api/auth/login', userData, {
-			headers: {
-				'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Headers': '*',
-			}
-		})
+		const { data } = await url.post('/api/auth/login', userData)
 		return data
 	} catch(err) {
 		console.log(err)
