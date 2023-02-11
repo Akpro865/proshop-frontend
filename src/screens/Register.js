@@ -47,10 +47,13 @@ export default function Register(){
 		try{
 			const { data } = await url.post('/api/auth/register', JSON.stringify(details), {
 				headers: {
-				'Accept': 'application/json',
-        'Content-Type': 'application/json',
-        "Access-Control-Allow-Headers": "*",
-			}
+					'Accept': 'application/json',
+        	'Content-Type': 'application/json',
+        	"Access-Control-Allow-Headers": "*",
+        	"Content-Type": "text/html; charset=utf-8",
+					"Content-Type": "multipart/form-data; boundary=something"
+
+				}
 			})
 			navigate('/login')
 		}catch(err){
